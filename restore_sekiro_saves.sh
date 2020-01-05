@@ -1,9 +1,22 @@
 #!/bin/sh
-# Author: github.com/WesleyBlancoYuan
 
 # Recommended to run with gitbash, or "Ubuntu for Windows", or any
 # equivalent Linux bash in Windows
-# all windows path are annotated with "/", not Windows classic "\"
+# all windows path are annotated with "/", not Windows classical "\"
+# to be compatible with (future possible) Linux path
+
+echo 
+echo '=================================================='
+echo '=================================================='
+echo '=====     Sekiro: Shadow die twice(tm)       ====='
+echo '=====         Restore your save file         ====='
+echo '=====                                        ====='
+echo '=====                  by                    ====='
+echo '=====                                        ====='
+echo '=====      github.com/WesleyBlancoYuan       ====='
+echo '=================================================='
+echo '=================================================='
+echo 
 
 # adapt as your needs
 SOURCE=/e/games/sekiro_saves
@@ -32,3 +45,4 @@ mv -v $FILENAME S0000.sl2 # mv overwrites without prompt
 # now source file is renamed, we must copy to get a bak; note now cp can work to rename! stupid
 cp -f -v S0000.sl2 S0000.sl2.bak
 echo Latest save file restored with $TORESTORE
+sleep 5 # wait 5 sec and close
