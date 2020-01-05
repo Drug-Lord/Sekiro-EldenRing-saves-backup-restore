@@ -28,7 +28,7 @@ for file in $SOURCE/*.sl2
 do
     let i++
     saves[$i]=$file
-    echo "[$i] $file"
+    echo "[$i] ${file##*/}"
 done
 
 read -p "Which save file to restore? " INDEX
