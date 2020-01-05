@@ -1,5 +1,5 @@
 @echo OFF
-
+echo:
 echo ==================================================
 echo ==================================================
 echo =====     Sekiro: Shadow die twice(tm)       =====
@@ -10,6 +10,7 @@ echo =====                                        =====
 echo =====      github.com/WesleyBlancoYuan       =====
 echo ==================================================
 echo ==================================================
+echo:
 
 REM for counter expansion in the loop
 setlocal enabledelayedexpansion
@@ -36,13 +37,12 @@ REM we hope that during the time of execution of last loop to here, there is no 
 REM of number/order of files in the source dir.
 set /A counter2=0
 set /p index="Which save file to restore? "
-echo Chosen index: %index%
+REM echo Chosen index: %index%
 set TORESTORE=
 for /r %source% %%H in (*.sl2) do (
     if !counter2! EQU %index% (
         REM fullpath: drive + path + filename + extension
         set TORESTORE=%%~dH%%~pH%%~nH%%~xH
-        echo !TORESTORE!
         REM hide options at the end; show Y/N/A letters; timeout 10s; default choice N
         REM ERRORLEVEL should be delayed to expand, too. 1 for Y, 2 for N, and 3 for A. 
         choice /n /c %yes%%no%a /t 10 /d %no% /m "Save file to restore: !TORESTORE!. Press [%yes%] to confirm, [%no%] to choose again, or [A] to abort: "
@@ -61,6 +61,7 @@ for /r %source% %%H in (*.sl2) do (
 )
 REM if selected index is out of range
 echo No matching save file with index %index% is found!
+echo:
 goto :begin
 
 :process
