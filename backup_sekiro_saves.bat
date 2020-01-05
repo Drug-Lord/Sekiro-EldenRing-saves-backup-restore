@@ -13,12 +13,12 @@ echo ==================================================
 echo:
 
 REM adapt as your needs
-set dest=e:\games\sekiro_saves
-REM source is always the same
-set source=%APPDATA%\Sekiro\76561198090276100
+set DEST=e:\games\sekiro_saves
+REM SOURCE is always the same
+set SOURCE=%APPDATA%\Sekiro\76561198090276100
 
-set /p name="Backup save file to %dest% with this name: "
-copy "%source%\S0000.sl2" "%dest%\%name%.sl2"
-echo Latest save copied to "%dest%\%name%.sl2"
+set /p name="Backup save file to %DEST% with this name: "
+copy "%SOURCE%\S0000.sl2" "%DEST%\%name%.sl2"
+echo Latest save copied to "%DEST%\%name%.sl2"
 TIMEOUT /T 5 
 exit

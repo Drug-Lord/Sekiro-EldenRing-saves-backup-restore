@@ -20,13 +20,13 @@ for /f "tokens=1,2 delims=[,]" %%a in ('"choice <nul 2>nul"') do set "yes=%%a" &
 
 :begin
 REM adapt as your needs
-set source=e:\games\sekiro_saves
+set SOURCE=e:\games\sekiro_saves
 REM destination is always the same
-set dest=%APPDATA%\Sekiro\76561198090276100
+set DEST=%APPDATA%\Sekiro\76561198090276100
 
-set /A counter=0
+set /A counter=1
 REM loop in the save files we have backed up to show options
-for /r %source% %%G in (*.sl2) do (
+for /r %SOURCE% %%G in (*.sl2) do (
     REM delayed expansion(!var!) in each loop, not always 0
     echo [!counter!] %%~nG%%~xG             
     set /A counter=counter+1
@@ -35,11 +35,11 @@ for /r %source% %%G in (*.sl2) do (
 REM because in cmd Map/table is not supported, we have to loop again to choose the file.
 REM we hope that during the time of execution of last loop to here, there is no change 
 REM of number/order of files in the source dir.
-set /A counter2=0
+set /A counter2=1
 set /p index="Which save file to restore? "
 REM echo Chosen index: %index%
 set TORESTORE=
-for /r %source% %%H in (*.sl2) do (
+for /r %SOURCE% %%H in (*.sl2) do (
     if !counter2! EQU %index% (
         REM fullpath: drive + path + filename + extension
         set TORESTORE=%%~dH%%~pH%%~nH%%~xH
@@ -65,8 +65,8 @@ echo:
 goto :begin
 
 :process
-copy %TORESTORE% %dest%\S0000.sl2
-copy %TORESTORE% %dest%\S0000.sl2.bak
+copy %TORESTORE% %DEST%\S0000.sl2
+copy %TORESTORE% %DEST%\S0000.sl2.bak
 echo Latest save file restored with %TORESTORE%
 TIMEOUT /T 5 
 exit
