@@ -18,7 +18,7 @@ do
     echo "[$i] $file"
 done
 
-read -p "Choose which save file to restore? " INDEX
+read -p "Which save file to restore? " INDEX
 TORESTORE=${saves[$INDEX]}
 echo File to restore: $TORESTORE
 # pattern to get filename
