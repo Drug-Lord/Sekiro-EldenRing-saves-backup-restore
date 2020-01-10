@@ -2,7 +2,7 @@
 Scripts of Windows CMD batch and bash to backup and restore save files of the game *Sekiro: Shadoes Die Twice*. 
 
 ## User interface
-A command-line based user interface is provided, the list of save files are marked with nubmer index for user to choose the save file to restore/backup. 
+A command-line based user interface is provided, the list of save files are marked with nubmers for user to choose the save file to restore/backup. 
 Confirmation is needed when restoring and overwriting; if timed out without user confirmation, nothing is done and user can choose again. 
 
 ## What this script does not do
