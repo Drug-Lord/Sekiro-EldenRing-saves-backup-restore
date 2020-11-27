@@ -28,7 +28,7 @@ SOURCE=$APPDATA/Sekiro/76561198090276100
 read -p "Backup save file to $DEST with this name: " FILENAME
 # it is not allowed to "copy and rename" when DEST is not same dir(stupid), so we have
 # to copy and rename(mv). Use "cp -f" to overwrite
-cp -v "$SOURCE/S0000.sl2" $DEST
+cp -v -f "$SOURCE/S0000.sl2" $DEST
 cd $DEST
 mv S0000.sl2 $FILENAME.sl2
 echo Latest save copied to "$DEST/$FILENAME.sl2"
