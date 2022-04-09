@@ -44,3 +44,7 @@ Some notes:
 - The cmd batch can be run in `cmd.exe`
 - The bash scripts should be run in `gitbash`, or WSL applications "Ubuntu for Windows". 
 - When you back up save file with a name, Unicode characters(CJK ones, for example) are supported as long as your OS supports it. But to correctly show them in cmd screen, remember that you still need proper CJK font installed for cmd. For Chinese I use "Yahei Mono" or "Simsun".
+
+
+2022/4/10
+Now this repo contains 2 files to backup/restore EldenRing save files, as they work similarly as Sekiro. And license changes to Creative Commons Attribution-NonCommercial-ShareAlike (CC-BY-NC-SA) license, which allows adaptation/share but no commercial use. When using, attribute to original creator which is me. And now license is GPLv3.
