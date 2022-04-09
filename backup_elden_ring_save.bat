@@ -29,7 +29,7 @@ echo:
 REM enable extension to allow mdkir to create intermediate dirs
 SETLOCAL ENABLEEXTENSIONS
 REM adapt as your needs
-set DEST=e:\GAMES\DDD
+set DEST=E:\GAMES\elden_ring_saves
 dir "%DEST%" > NUL 2>&1
 if %ERRORLEVEL% EQU 1 (
     mkdir "%DEST%"
