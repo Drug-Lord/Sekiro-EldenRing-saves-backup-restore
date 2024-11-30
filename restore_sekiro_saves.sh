@@ -35,7 +35,7 @@ echo
 
 # adapt as your needs
 SOURCE=/e/games/sekiro_saves
-DEST=$APPDATA/Sekiro/76561198090276100
+DEST=$APPDATA/Sekiro/76561199140944170
 # declare a table, for bash v4.0 above
 declare -A saves
 i=0
